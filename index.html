@@ -1,0 +1,1721 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+        onload="renderMathInElement(document.body);"></script>
+        <link rel="stylesheet" href="style.css">
+        
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+        <style>
+            
+                pre[class*="language-"], 
+                code[class*="language-"] {
+                    background: #000000 !important; /* Pure Black */
+                    color: #ffffff !important;      /* Ensure base text is white */
+                }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-hlsl.min.js"></script>
+        
+    </head>
+<body style="background-color: #000000 ">
+<div class="article">
+
+<h1>
+<a>
+		<strong>Matemathics Explanations of Plot Programming</strong>
+	</a>
+</h1>
+
+<h1>
+	<a>
+		<strong>Math Explanation CODE relations</strong>
+	</a>
+</h1>	
+    
+<p class="siteSub">
+
+From Andraelity, how CODE using math. 
+
+</p>
+
+<p class="roleNote">
+
+    In thy following lines we are going to verify or create the connexion that would allow us to unite code with mathematics
+
+</p>
+
+<div class="articleRight">
+    
+    <div  class="articleRightInner">
+
+      <img width="400"  src="Img/BlueprintCode.png" class="center">
+      <br>  
+<a target = "_blank" href="https://www.youtube.com/channel/UC-4AaN4M3Sq1lY6NVZnfaEw">Youtube/Andreality</a>
+</div>
+</div>
+<p>
+	<strong>Shaders-Plane</strong>
+
+
+After we had define exactly how the idea of shaders work, and which are the primary concepts that we understand about computer, the process we are going to follow
+would be to start making outputs on graphic structures at the same time that we understand and comprehend the mathematical structures that are going to provide us 
+with the step by step to achieve visual representations and overall systematic representation of information and graphical relationships.
+
+</p>
+
+
+
+        
+
+<div class="contentsPanel">
+    <div class="contentsHeader">Index Webpages Redirect</div>
+    <ul>
+
+
+<li><span>&.</span><a href="https://andreality1.github.io/Mathematics-Code_INDEX/"> Index</a></li>
+<li><span>0.</span><a href="https://andreality1.github.io/Mathematics-Code-EulersIdentiy/"> EulersIdentity</a></li>
+<li><span>1.</span><a href="https://andreality1.github.io/Mathematics-Code-Derivatives/"> Derivatives</a></li>
+<li><span>2.</span><a href="https://andreality1.github.io/Mathematics-Code-Shaders/"> Shaders</a></li>
+            
+
+</ul>
+</div>
+
+<!-- 
+    
+ _______           _______  ______   _______  _______  _______ 
+(  ____ \|\     /|(  ___  )(  __  \ (  ____ \(  ____ )(  ____ \
+| (    \/| )   ( || (   ) || (  \  )| (    \/| (    )|| (    \/
+| (_____ | (___) || (___) || |   ) || (__    | (____)|| (_____ 
+(_____  )|  ___  ||  ___  || |   | ||  __)   |     __)(_____  )
+      ) || (   ) || (   ) || |   ) || (      | (\ (         ) |
+/\____) || )   ( || )   ( || (__/  )| (____/\| ) \ \__/\____) |
+\_______)|/     \||/     \|(______/ (_______/|/   \__/\_______)
+ _______  _______  _______  _______          _________ _______  _______ 
+(  ____ \(  ____ )(  ___  )(  ____ )|\     /|\__   __/(  ____ \(  ____ \
+| (    \/| (    )|| (   ) || (    )|| )   ( |   ) (   | (    \/| (    \/
+| |      | (____)|| (___) || (____)|| (___) |   | |   | |      | (_____ 
+| | ____ |     __)|  ___  ||  _____)|  ___  |   | |   | |      (_____  )
+| | \_  )| (\ (   | (   ) || (      | (   ) |   | |   | |            ) |
+| (___) || ) \ \__| )   ( || )      | )   ( |___) (___| (____/\/\____) |
+(_______)|/   \__/|/     \||/       |/     \|\_______/(_______/\_______)
+                                                                         
+-->
+
+
+
+<h2 style="font-size: 50px;" ><strong>Computer Shaders Graphics</strong></h2>
+<!-- <h1><b><a href="https://andraelity.github.io/WebPageVideoTest/" > https://andraelity.github.io/WebPageVideoTest/ </a></b></h1> -->
+<!-- <h1><b><a> Factorial Identification </a></b></h1> -->
+
+
+<!-- 
+_______ _________ _______  _______  _        _______  _______  ______   _______ 
+(  ____ \\__   __/(  ____ )(  ____ \( \      (  ____ \(  ____ \(  __  \ (  ____ \
+| (    \/   ) (   | (    )|| (    \/| (      | (    \/| (    \/| (  \  )| (    \/
+| |         | |   | (____)|| |      | |      | (__    | (_____ | |   ) || (__    
+| |         | |   |     __)| |      | |      |  __)   (_____  )| |   | ||  __)   
+| |         | |   | (\ (   | |      | |      | (            ) || |   ) || (      
+| (____/\___) (___| ) \ \__| (____/\| (____/\| (____/\/\____) || (__/  )| )      
+(_______/\_______/|/   \__/(_______/(_______/(_______/\_______)(______/ |/       
+                                                                                 
+-->
+
+<hr>
+<hr>
+<h1 style="font-size: 40px;"id ="CircleSDF"><b> CircleSDF</b></h1>
+
+
+
+<div style = "font-size: 21px">
+
+
+<pre><code class="language-hlsl">
+
+    
+fixed4 frag (PixelData i) : SV_Target
+{
+
+float2 uv =  i.uv ;
+float4 col = float4(0,0,0,1);
+float4 red = float4(1,0,0,1);
+float4 white = float4(1,1,1,1);
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float2 coor = coordinateScale;
+
+float radius = 0.5;
+
+float number = length(coor) - radius;
+
+float smooth = 1.0 - smoothstep(0.0, 0.01, number );                
+
+col = fixed4(smooth, 0.0, 0.0, 1.0);
+
+return col;
+    
+}
+</code></pre>
+
+$$\begin{aligned}
+&\text{what we need to define right now is something that could allow us to to explain the difference between the previous theory}\\
+&\text{of circle drawing, once we had identify this elements once we identify how to create a relationship between distances and }\\
+&\text{identity properties is when we are going to be able to specify which procedures allow us to get information that we need }\\
+&\text{from the equations.}\\
+\end{aligned}$$
+
+</div>
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float2 uv =  i.uv ;
+float4 col = float4(0,0,0,1);
+float4 red = float4(1,0,0,1);
+float4 white = float4(1,1,1,1);
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float2 coor = coordinateScale;
+
+float radius = 0.5;
+    
+</code></pre>
+    
+$$\begin{aligned}
+&\text{Everything from this point on before is pretty straight forward all the information here is very well describe }\\
+&\text{and the operation on each pixel was very well describe. and the information was set, only we required to explain }\\
+&\text{is the steps ahead and how each operation allows us to define limits of identity, that we could use to create }\\
+&\text{information and details.}\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float number = length(coor) - radius;
+   
+float smooth = 1.0 - smoothstep(0.0, 0.01, number );                
+
+col = fixed4(smooth, 0.0, 0.0, 1.0);
+
+return col;
+    
+</code></pre>
+    
+$$\begin{aligned}
+&\text{ This is going to be the set of functions that we need to clarify in order to make understanding of how this values}\\
+&\text{ are being represented, logically this representations. }\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/CircleDrawSmooth.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<hr>
+<div style = "font-size: 21px">
+$$SMOOTHSTEP$$
+</div>
+<br>
+<img src="Img/CircleBorderSmooth.png"  style="display: block; margin: 0 auto; width: 30%;">
+
+
+<hr>
+<div style = "font-size: 21px">
+    $$NON \ SMOOTHSTEP$$
+</div>    
+<img src="Img/CircleBorderSimple.png"  style="display: block; margin: 0 auto; width: 30%;">
+<br>
+
+<br>
+
+
+<div style = "font-size: 21px">
+
+$$\\[5ex]$$
+    
+$$\begin{aligned}
+&\text{now that we already now the difference between one and the other we are going to explain how we }\\
+&\text{modify the pixels this way and how we are able to make this smooth blending between the pixels. }
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+float number = length(coor) - radius;
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{We already know that the }\quad length(vector)\ \quad\text{is going to provide us with the magnitude of the vector. }\\
+&\text{so if we apply this to every single coordinate in the plane then we are going to be able to take a mathematical }\\
+&\text{representation or rather say a value that we could use to specify exactly which positions points fall into this category }\\
+&\text{the idea with this substractions is make all the points fall into a ratio, or rather say a radius. }\\
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\\[1ex]\\
+&\text{The idea is to make the evaluation of this substraction to provide us a positive or negative value that we could use to}\\
+&\text{exemplify the information correctly.}\\
+\end{aligned}$$
+
+</div>    
+
+<img src="Img/UnitaryCircleLines.png"  style="display: block; margin: 0 auto; width: 30%;">
+<br>
+
+
+<div style = "font-size: 21px">
+        
+$$\begin{aligned}
+&\text{ If we take a random set of lines from the circle, and placed them horizontal one next to the other, and we also place the }\\
+&\text{ radius of the of the circle here on horizontal bars but rather colored green, so what we need to visualize here is that if }\\
+&\text{ we substract the green bar from each orange bar, we are going to end up with the next two tables.}
+\end{aligned}$$
+
+</div>    
+
+<img src="Img/BarsLengthCircle.png"  style="display: block; margin: 0 auto; width: 70%;">
+
+<br>
+
+<img src="Img/BarsLengthCircleSub.png"  style="display: block; margin: 0 auto; width: 70%;">
+
+<br>
+
+<div style = "font-size: 21px">
+        
+$$\begin{aligned}
+&\text{ if we take into recognition all the red lines are going to represent the lines that are inside the circle, cuz the radius}\\
+&\text{ is greater than its magnitude, so that'll be the way how we could check each single coordinate as a vector, in order }\\
+&\text{ to recognize or identify if we need to paint it or not. In mathematical terms would be:}\\
+\end{aligned}$$
+
+
+$$ \|\mathbf{coor}\| - r \ = \  length(\mathbf{coor}) - r $$
+
+$$\\[4ex]\\$$
+
+$$C = \text{Coordinate in CIRCLE,} \quad \|\mathbf{coor}\| = \sqrt{x^2 + y^2}$$
+
+$$\\[4ex]\\$$
+
+$$C = \{ \mathbf{coor} \in \mathbb{R}^2 : \|\mathbf{coor}\| \leq r \}$$
+
+$$\\[4ex]\\$$
+
+$$\text{Radius: } r \in \mathbb{R}^+$$
+</div>    
+    
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+float smooth = 1.0 - smoothstep(0.0, 0.01, number);                
+</code></pre>
+
+$$\\[4ex]\\$$
+
+$$\text{smoothstep}(0.0, 0.01, number)$$
+
+$$\begin{aligned}
+&\text{with this line of code, the thing that we are doing is runnning over the edge of the circle is as if you were using a .}\\
+&\text{highlighter mark that goes through all the line that surrounds the circle }\\
+\end{aligned}$$
+
+$$\begin{aligned}
+    &\text{the reason why this thing works is cuz each time that we operate the substractions on the coordinates, we }\\
+&\text{are going to end with a number greater or lesser than 0, and if the result of this operations fall into }\\
+&\text{this gap }\ (0.0, 0.01) \ \text{its going to be the section of the circle that we are going to smooth the values from.}\\
+\end{aligned}$$
+
+$$\begin{aligned}
+&\text{but remember that the output from the smoothstep is always a number between 0 and 1, which means that the mapping}\\
+&\text{of the numbers that are less than 0 from the equation } magnitude - radius \text{ is going to be reduced to}\\
+&\text{to all values less than 0 all of them map to 0.}\\
+&\text{to all values between than 0 and 0.01 map to all values between 0 and 1 }\\
+&\text{to all values greater than 1 all of them amp to 1.}\\
+\end{aligned}$$
+
+</div>        
+
+
+<div style = "font-size: 21px">
+
+$$\\[5ex]$$
+
+$$f(x) = \begin{cases} 0 & \text{if } x \le 0 \\ \frac{x}{0.01} & \text{if } 0 < x < 0.01 \\ 1 & \text{if } x \ge 0.01 \end{cases}$$
+
+$$\\[4ex]$$
+
+$$x = \|\mathbf{coor}\| - r \quad \text{:This represents our "magnitude - radius" value.}$$
+
+$$\\[4ex]$$
+
+$$x \le 0 \mapsto 0 \quad \text{:Handles all values less than or equal to 0 mapping to 0.}$$
+
+$$\\[4ex]$$
+
+$$0 < x < 0.01 \mapsto [0, 1] \quad \text{:Represents the transition zone.  }$$
+
+$$\\[4ex]$$
+
+$$[0, 0.01]\ to\ [0, 1]\ \text{the expression}\ \frac{x}{0.01}\ (or\ 100x) \quad \text{:scales that tiny interval to the full unit range.}$$
+
+$$\\[4ex]$$
+
+$$x \ge 0.01 \mapsto 1 \quad \text{:Clamps all values greater than the threshold to 1.}$$
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{The full idea would be if:}\\
+&\text{if the output of the smoothfunction is less than 0 then color using red }\\
+&\text{if the output of the smoothfunction is more than 1 then color using black }\\
+&\text{and if the output of the smoothfunction is between 0 and 1 then color using blend mixtures of red and black proportioned}\\
+\end{aligned}$$
+
+
+</div>        
+<img src="Img/PositiveAndNegative.png"  style="display: block; margin: 0 auto; width: 30%;">
+
+
+<br>
+
+<img src="Img/ColorBlendRedBlack.png"  style="display: block; margin: 0 auto; width: 30%;">
+
+<br>
+
+<img src="Img/CircleColorsInverted.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+float smooth = smoothstep(0.0, 0.01, number);                
+
+col = fixed4(smooth, 0.0, 0.0, 1.0);
+
+return col;
+</code></pre>
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{if we put the function output of this reasoning as the color to paint in the output of the shader, remember}\\
+&\text{the output is going to be a value between 0 and 1, and colors in shaders could be represented as a combination of}\\
+&\text{values RGB from 0 to 1 each one, in this case.}\\
+&\text{So if we put this output as the color we are going to get the colors inverted}\\
+&\text{The reason is cuz section of the circle would be presented as 0 values, and the sections outside the circle would be}\\
+&\text{presented as 1 values, and the values in between 1 and 0 a blend between black and red.}\\
+\end{aligned}$$
+
+$$\begin{aligned}
+
+&\text{now the questions is going to be how we could inverse the colors, well thats is just simply by doing a  }\\
+&\text{substractions to all the points to a 1}\\
+&\text{this would give the inverse mapping of the smoothstep. }\\
+
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+float smooth = 1 - smoothstep(0.0, 0.01, number);                
+
+col = fixed4(smooth, 0.0, 0.0, 1.0);
+
+return col;
+</code></pre>
+
+<img src="Img/CircleDrawSmooth.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{if we take, 1 unit and substract the smoothfunction from it, we are going to get the values from the smoothfunction}\\
+&\bullet\textbf{ inverse of the unit number}\ or\ \bullet\textbf{the reflect of the unit number.}\\
+&\\[1ex]
+
+&\text{or you could also obtain this values if the smoothfunction function was reflected and horizontal translated}\\
+&\text{ 1 unit to the right. }\\
+\end{aligned}$$
+        
+        
+</div>        
+
+<img src="Img/SmoothfunctionReflectFull.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float smoothstepREFLECT(float a, float b, float x)
+{
+    float check = (x - a )/(b - a );
+    float check2 = max(0, min(1,check));
+    check2 = check2 - 1;
+    
+    float result = 3.0 * check2 * check2 + 2.0 * check2 * check2 * check2;
+    
+    float putOut = result;
+    return putOut;
+}
+
+float smooth = smoothstepREFLECT(0.0, 0.01, number);                
+
+col = fixed4(smooth, 0.0, 0.0, 1.0);
+
+return col;
+
+</code></pre>
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{If we use this functions we are going to end up with the same output.}\\
+\end{aligned}$$
+
+</div>        
+<img src="Img/NegativeAndPositive.png"  style="display: block; margin: 0 auto; width: 30%;">
+
+<img src="Img/CircleDrawSmooth.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{There is a third way how to get the same output, by reordering the same properties we're ben using since }\\
+&\text{the beginning, we need to understand that the general idea here is to create sections where the evaluation }\\
+&\text{gives a negative sign and a positive sign depending if we are inside or outside of the circle}\\
+\end{aligned}$$
+    
+</div>        
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+        
+float number = radius - length(coor);
+   
+float smooth = smoothstep(0.0, 0.01, number);                
+
+col = fixed4(smooth, 0.0, 0.0, 1.0);
+
+return col;
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{So if we switch the radius to always be positive we could change the type of evaluation that we are taking}\\
+&\text{and we are going to evaluate the distances always as negative if they are greater than the radius and the }\\
+&\text{inside of the circle always positive.}\\
+&\text{with this reorganization we could save instructions but at cost of complexity in understanding.}\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/NegativeAndPositive.png"  style="display: block; margin: 0 auto; width: 30%;">
+
+<img src="Img/CircleDrawSmooth.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_CircleSDF_0.shader">
+Shader_CircleSDF_0.shader 
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_CircleSDF_1.shader">
+Shader_CircleSDF_1.shader 
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_CircleSDF_2.shader">
+Shader_CircleSDF_2.shader 
+</a>
+                                                                                                            
+
+
+
+
+<!-- 
+_______          _________ _______  _       _________ _        _______  _______ 
+(  ___  )|\     /|\__   __/(  ____ \( \      \__   __/( (    /|(  ____ \(  ____ \
+| (   ) |( \   / )   ) (   | (    \/| (         ) (   |  \  ( || (    \/| (    \/
+| (___) | \ (_) /    | |   | (_____ | |         | |   |   \ | || (__    | (_____ 
+|  ___  |  ) _ (     | |   (_____  )| |         | |   | (\ \) ||  __)   (_____  )
+| (   ) | / ( ) \    | |         ) || |         | |   | | \   || (            ) |
+| )   ( |( /   \ )___) (___/\____) || (____/\___) (___| )  \  || (____/\/\____) |
+|/     \||/     \|\_______/\_______)(_______/\_______/|/    )_)(_______/\_______)
+-->
+
+
+<hr>
+<hr>
+<div style = "font-size: 21px">
+    $$\LARGE\text {Axis Lines}$$
+</div>        
+
+<div style = "font-size: 21px">
+    
+<img src="Img/AxisLines.png"  style="display: block; margin: 0 auto; width: 50%;">
+    
+<pre><code class="language-hlsl">
+
+fixed4 frag (PixelData i) : SV_Target
+{
+        
+float2 uv =  i.uv ;
+float4 col = float4(0,0,0,1);
+float4 red = float4(1,0,0,1);
+float4 white = float4(1,1,1,1);
+
+float2 toOneUV = uv;
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float2 coor = coordinateScale ;
+
+float AxisThickness = 0.01;
+
+float xAxis =  smoothstep(AxisThickness, 0.00, abs(coor.y));
+float yAxis =  smoothstep(AxisThickness, 0.00, abs(coor.x));
+float axisMask = ceil(xAxis + yAxis);
+
+float smooth = axisMask;
+
+col = fixed4(smooth, smooth, smooth, 1.0);
+
+return col;
+
+}
+</code></pre>
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{Now that we got a general idea about what is like to paint things, we could beging thinking on how to use }\\
+&\text{this concepts to start making new shapes, and new figures that we could use to understand more things in the }\\
+&\text{the future. }\\
+\end{aligned}$$
+
+</div>
+        
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{lets start by painting the axis lines that define the X and X coordinate system. }\\
+&\text{The first question that we got to ask here, is how exactly we could make this lines without making it two rectangles}\\
+&\text{overpositioned one over the other.}\\
+&\text{lets ask ourself this question, is there a way to get this information the same way on the idea of how we paint the}\\
+&\text{circle, and the ideas that take us to drawing the same.}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float AxisThickness = 0.01;
+
+float xAxis =  smoothstep(AxisThickness, 0.00, abs(coor.y));
+float yAxis =  smoothstep(AxisThickness, 0.00, abs(coor.x));
+float axisMask = ceil(xAxis + yAxis);
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{all the idea behind this concept lies within this 4 lines, we could draw both of the lines just by making use of this}\\
+&\text{4 lines, lest understand how exactly we could make this happen, in such simplicity.}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float AxisThickness = 0.01;
+
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{this lines is the thickness of the axis lines, this value assignation is pretty simple, its just the idea of what}\\
+&\text{this thing is going to help us with, that matter.}\\
+\end{aligned}$$
+
+</div>
+
+        
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float xAxis =  smoothstep(AxisThickness, 0.00, abs(coor.y));
+float yAxis =  smoothstep(AxisThickness, 0.00, abs(coor.x));
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{Lets explain what this two lines are doing, the first line is taking the smoothstep an absolute value inside a bound }\\
+&\text{made of the thickness size of the axis lines, and 0 size. }\\
+&\text{so lets start from the insides to the outsides, lets explain what the abs() function is doing here. }\\
+&\text{as we are going to see in more shaders in the future, the abs functions here, is making all the points from that are in}\\
+&\text{the space and making them all positive, which means that every single operations that we do on this points; that were modified}\\
+&\text{to be positive; would still paint in the same coordinate position on the screen plane, but its properties inside  }\\
+&\text{the computational space are different, same position on screen, but different properties and values inside the computer}\\
+&\text{space.}\\
+\end{aligned}$$
+
+</div>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\LARGE\text{The values of the coordinate  } (x,y) \implies (-1.5,\ 1.5)\\
+\end{aligned}$$
+
+</div>
+        
+<img src="Img/SpaceToSpace.png"  style="display: block; margin: 0 auto; width: 70%;">
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\LARGE\text{The values of the coordinate  } f(x,y) \implies abs(x,y) \implies abs(-1.5,\ 1.5) \\
+\end{aligned}$$
+
+$$\LARGE f(x,y) = abs(-1.5,\ 1.5) = (1.5,\ 1.5)\\$$
+
+</div>
+
+<img src="Img/SpaceToSpace2.png"  style="display: block; margin: 0 auto; width: 70%;">
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{The values of the coordinate in the computer space are going to change according to the position on the cuadrant they are}\\
+&\text{Every point is going to be evaluated as if they were both on the positive cuadrant.}\\
+\end{aligned}$$
+    
+    
+$$\begin{aligned}
+&\text{So if both of the points were projected into the positive cuadrant which is going to be operation that we are }\\
+&\text{are going to perform with the smoothstep function}\\
+\end{aligned}$$
+    
+<pre><code class="language-hlsl">
+
+float xAxis =  smoothstep(0.01, 0.00, abs(coor.y));
+float yAxis =  smoothstep(0.01, 0.00, abs(coor.x));
+
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{Make notice that the first parameters in the smoothstep function is greater than the second parameters, but what is the }\\
+&\text{difference between making the first parameter greater than the second one.}\\
+&\text{what is the main idea behind making one parameter greater than the second. which are the only two options that we could }\\
+&\text{make action in this specific function.}\\
+\end{aligned}$$
+
+</div>
+
+
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{The idea here is to visualize how this code works in the representations of the numbers, in the real numbers space of values }\\
+\end{aligned}$$
+    
+<pre><code class="language-hlsl">
+        
+float xAxis =  smoothstep(0.01, 0.00, abs(coor.y));
+float yAxis =  smoothstep(0.01, 0.00, abs(coor.x));
+        
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{A way to clarify this information is going to be by setting the information in a line where the actions depends from which side }\\
+&\text{the smoothstep came from. }\\
+&\text{if the smoothstep values are a < b , then the evaluation of x is going to get greater if x increment}\\
+&\text{but if the smoothstep values are a > b , then the evaluation of x is going to get greater if x decrease}\\
+\end{aligned}$$
+$$\\[5ex]\\$$
+
+$$t = \frac{x - a}{b - a}$$
+
+$$\\[10ex]\\$$
+$$\LARGE\text{CASE }\#1$$
+$$\\[5ex]\\$$
+$$edge0 = a = 2 $$
+$$edge1 = b = 5 $$
+$$\\[5ex]\\$$
+$$t = \frac{x - \text{edge0}}{\text{edge1} - \text{edge0}}$$
+$$\\[5ex]\\$$
+$$t = \frac{x - 2}{5 - 2} \implies a < b \implies 2 < 5$$ 
+$$\\[5ex]\\$$
+
+$$\\[10ex]\\$$
+$$\LARGE\text{CASE }\#2$$
+$$\\[5ex]\\$$
+$$edge1 = a = 5 $$
+$$edge0 = b = 2 $$
+$$\\[5ex]\\$$
+$$t = \frac{x - \text{edge1}}{\text{edge0} - \text{edge1}}$$
+$$\\[5ex]\\$$
+$$t = \frac{x - 5}{2 - 5} \implies a > b \implies 5 > 2$$ 
+$$\\[5ex]\\$$
+
+<pre><code class="language-hlsl">
+        
+float value =  smoothstep(a, b, x);
+                
+</code></pre>
+    
+</div>    
+
+<img src="Img/CombineSmoothStep.png"  style="display: block; margin: 0 auto; width: 70%;">
+
+<br>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{the thing with this function is that we could get exactly the same behavior of the reflected smoothstep, just by changing }\\
+&\text{order of the values, we could get exactly the oposite representation of the smoothstep function just by making the }\\
+&\text{greatest values first.}\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/SmoothStepBoth.png"  style="display: block; margin: 0 auto; width: 70%;">
+<img src="Img/SmoothfunctionReflectFull.png"  style="display: block; margin: 0 auto; width: 70%;">
+
+
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{The reason why we were explaining all this ideas is cuz the main concepts of this type of ideas besides on how we could}\\
+&\text{make this information to be related with the entire concept.}\\
+\end{aligned}$$
+        
+<pre><code class="language-hlsl">
+
+float xAxis =  smoothstep(AxisThickness, 0.00, abs(coor.y));
+float yAxis =  smoothstep(AxisThickness, 0.00, abs(coor.x));
+        
+</code></pre>
+
+$$\begin{aligned}
+&\text{the idea behind is that all the points are going to be stablish between the positive cuadrant of the cartesian plane}\\
+&\text{and once the points are there we are going to define a BOUND, from [0.00 to AxisThickness], but cuz the bounds are set up}\\
+&\text{inverted, then the values are going to be 0 for numbers higher than the AxisThickness, and 1 for values under 0.00}\\
+&\text{but cuz there is not going to be a value under 0, cuz every point is positive then we are going to get only values }\\
+&\text{greater than 0.00 but lesser than AxisThicness, between points where their coordinates (x or y) are between 0.00 and AxisThickness}\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+        
+<pre><code class="language-hlsl">
+
+float axisMask = ceil(xAxis + yAxis);
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{And cuz the values that we are going to get are all over 0, all this values are also going to be values less }\\
+&\text{than 1 or equal to 1, then if we implement the ceil function then we are going to end up getting for all the values }\\
+&\text{between 0 to 1, to all be 1, and thats the reason why we get the sharp edges on the axis lines}\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/AxisLines.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_AxisLines_SDF.shader">
+Shader_AxisLines_SDF.shader
+</a>
+
+
+<!-- 
+_______  _______ _________ ______     _       _________ _        _______  _______ 
+(  ____ \(  ____ )\__   __/(  __  \   ( \      \__   __/( (    /|(  ____ \(  ____ \
+| (    \/| (    )|   ) (   | (  \  )  | (         ) (   |  \  ( || (    \/| (    \/
+| |      | (____)|   | |   | |   ) |  | |         | |   |   \ | || (__    | (_____ 
+| | ____ |     __)   | |   | |   | |  | |         | |   | (\ \) ||  __)   (_____  )
+| | \_  )| (\ (      | |   | |   ) |  | |         | |   | | \   || (            ) |
+| (___) || ) \ \_____) (___| (__/  )  | (____/\___) (___| )  \  || (____/\/\____) |
+(_______)|/   \__/\_______/(______/   (_______/\_______/|/    )_)(_______/\_______)
+-->
+
+
+
+
+<hr>
+<div style = "font-size: 21px">
+        $$\LARGE\text {Grid Shader}$$
+</div>        
+<hr>
+
+
+
+<img src="Img/GRIDSHADER.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{The next things that we are going to draw is going to be a grid, we already got the idea on how to use }\\
+&\text{distances to create areas or sections that would be painted or colored,  so lets define what really }\\
+&\text{is a grid mathematically speaking of course. }\\
+\end{aligned}$$
+
+</div>
+
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+fixed4 frag (PixelData i) : SV_Target
+{
+    
+float2 uv =  i.uv ;
+float4 col = float4(0,0,0,1);
+float4 red = float4(1,0,0,1);
+float4 white = float4(1,1,1,1);
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float PI = acos(-1.0);
+
+float2 coor =  coordinateScale * PI * 2.0 * 5.0 ;
+
+float Coord0 = cos(coor.x);
+float Coord1 = cos(coor.y);
+
+// the grid in itself
+float value =  smoothstep(0.98, 1.0, max(Coord0,Coord1));
+
+float smooth = 0.0 + value;
+
+col = fixed4(smooth, smooth, smooth, 1.0);
+
+return col;
+
+}
+
+</code></pre>
+
+</div>
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{Lets explain line by line how this things really works which are the things that we need to clarify in order.  }\\
+&\text{to make this idea completely clarify the actions that could make this things be correctly ordered.  }\\
+&\text{The first thing that we need to clarify is going to be something that we had already see  }\\
+
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float2 uv =  i.uv ;
+float4 col = float4(0,0,0,1);
+float4 red = float4(1,0,0,1);
+float4 white = float4(1,1,1,1);
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{everything till this point everything has been specify and clarify the ideas that we're been handling were clarified}\\
+&\text{since the beginning of this pages, everything is clear here. right?}\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{So lets explain the things that we could detail in the next lines on, which are the things that we need to clarify }\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float PI = acos(-1.0);
+
+float2 coor =  coordinateScale PI * 2.0 * 5.0 ;
+
+float Coord0 = cos(coor.x);
+float Coord1 = cos(coor.y);
+
+// the grid in itself
+float value =  smoothstep(0.98, 1.0, max(Coord0,Coord1));
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{which are the things that we could understand from the first line on}\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float PI = acos(-1.0);
+
+float2 coor =  2 * PI * 5.0 * coordinateScale;
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{what is really happening in here, which are the things that we are trying to clarify here, which are the concepts that}\\
+&\text{we need to exemplify in this particular field in order to completely validate its functions.}\\
+&\text{lets explain the } arcosine(-1.0) \ \text{function and how its works} \\
+\end{aligned}$$
+,
+</div>
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{we need to exemplify in this particular field in order to completely validate its functions.}\\
+&\text{lets explain the } arcosine(-1.0) \ \text{function and how it works} \\
+\end{aligned}$$
+
+$$\LARGE y = \arccos(x)$$
+
+</div>
+
+<img  src="Img/ArcosPlot.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{what we are trying to do here with the arcosine function is to get the PI number, is just that, how to get the PI number}\\
+&\text{and as you know if you put the PI number in the cosine function\_\_ } cos(\pi)\ \text{ \_\_then we are going to get }\ -1\\
+&\text{and as we all know the } arcos(y) \text{ function is the inverse of the } cos(x) \text{ where } y = cos(x) \ \text{and}  \\
+&\text{the output from the } arcos(y) = \pi \\
+&\text{Basically the function allow us to get } \pi \\
+\end{aligned}$$
+
+$$ cos(\pi) = -1$$
+$$ arcos(y) = \pi$$
+$$ y = cos(\pi) = -1 $$
+$$ arcos(cos(\pi)) = \pi$$
+    
+</div>
+    
+<br>
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float2 coor =  coordinateScale * PI * 2.0 * 5.0 ;
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{Now lets make use of pi, the idea here is to understand how we can scale this dimension in such way that}\\
+&\text{we could keep making modification in the space where things work in units and tens and cents, something that }\\
+&\text{we could use to reorder things over the space in the way we want, something that allow us to move things over }\\
+&\text{the space how we want it, in the same unit system. }\\
+\end{aligned}$$
+
+</div>
+        
+
+<img  src="Img/SpaceMultiplication.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+        
+<div style = "font-size: 21px">
+        
+$$\begin{aligned}
+&\text{The things that we are really doing right now is something that is like multipliying but not multiplying}\\
+&\text{am I being clear?, like is rather than a physical property more something of a value representation or reformation . }\\
+&\text{of something, for example what happens when you multiply a something by 2, the general idea is that you are going to  }\\
+&\text{get two somethings, and if you multiply a something for 3 then you are going to get 3 somethings. and so on and on... }\\
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{here what we are doing is multipliying everyting by something, what happens when you multiply everything by something?}\\
+&\text{what happens when you get everything and then multiply the everyting by something?, those are the questions that really }\\
+&\text{trigger the unknow, the moment when you start thinking about what it would be like scaling things or everything }\\
+&\text{by a ratio of something.  }\\
+\end{aligned}$$
+        
+
+$$\begin{aligned}
+&\text{The idea is going to be made the spaces to switch from one scale to the other at the same time we keep the }\\
+&\text{distances as they were.}\\
+\end{aligned}$$
+</div>
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float2 coor =  coordinateScale * PI * 2 * 5.0;z
+                        
+</code></pre>
+        
+$$\begin{aligned}
+&\text{Could be more easy to visualize it in this way, by detailing what steps we are following on the code, in words it says:}\\
+&\text{For a space made of units, make the units measure one PI, then add two PI inside each PI unit, and then make each 5  }\\
+&\text{PI units to measure a unit of a unit of the standard unit, the unit that we define from the beginnings of the units,}\\
+&\text{the idea of a unit.}\\
+\end{aligned}$$
+
+$$\begin{aligned}
+&\text{The thing that we need to clarify now is how we are able to shrink thinks into less space, which is the best way to make }\\
+&\text{comprehension of this elements, what I think is the best way to understand this is imagine the scale as a way to get things }\\
+&\text{further or closer, which are the things that are closer and which things are nearer, imagine this as a camera that is }\\
+&\text{getting closer or farther, placed at a distance looking at a plane with thins on it, then the other camera is set }\\
+&\text{up to a completely different distance looking at a different plane but at the end, both cameras images are placed one over }\\
+&\text{the other, and the distances from the camera to the plane are so well positioned in so very precise distances that the }\\
+&\text{image that they output by overposition one over the other looks as if both were drawed under the same distance space. }\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{now you could be wondering why we are using the number}\ \pi \text{ , the reason came from the next lines of code. }\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float Coord0 = cos(coor.x);
+float Coord1 = cos(coor.y);
+
+</code></pre>
+
+</div>
+
+<img  src="Img/Cos2PI.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\\[5ex]
+&\text{the thing here with the cosine function is that we are going to get 1 every}\ 2 * \pi \ \text{, which means that every each}\\
+&\ 2 * \pi \ \text{we could make a line of our desired width just by extending how much distance from the 1 we want the borders to be}\\
+&\text{ borders to be}\\
+
+\end{aligned}$$
+
+$$ cos(2pi * L) = 1 , \quad where \quad L \implies \mathbb{Z} \implies INTEGER\; NUMBER $$ 
+$$\\[5ex]\\$$
+
+</div>
+
+<img src="Img/Cos2PiHorizontal.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{ The VERTICAL LINES are for the,} \quad cos(x)\\
+&\text{ The HORIZONTAL LINES are for the,} \quad cos(y)\\
+\end{aligned}$$
+        
+</div>
+
+<img src="Img/Cos2PIBOTH.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{now the way how we are able to understand that, is by evaluating each single of this pixels with the coordinates  }\\
+&\text{specified on the fragment shader, once we had evaluate the coordinates with the cos functions is when we  }\\
+&\text{are going to be able to make use of the smoothstep function to create the bounds of which colors should be  }\\
+&\text{colored, by setting up the bounds where we want this things to be colored and where we dont want to be colored }\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float value =  smoothstep(0.98, 1.0, max(Coord0,Coord1));
+
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{The idea now is to set up the bounds in a way that allow us to create a representation that we could make off.}\\
+\end{aligned}$$
+
+$$\begin{aligned}
+&\text{so the idea here with the smoothstep function is make the greatest number between Coord0, and Coord1}\\
+&\text{verify if its over the range specified, so if the number is over the range specified, then paint the pixel}\\
+&\text{if not dont paint.}\\
+\end{aligned}$$
+
+</div>
+
+<hr>
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float value =  smoothstep(0.98, 1.0, max(Coord0,Coord1));
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{this would be the output if we set the bound to } [0.98 \: ,\: 1.0]\\
+&\text{}\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/0.98_1.00.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<hr>
+
+<div style = "font-size: 21px">
+    
+<pre><code class="language-hlsl">
+
+float value =  smoothstep(0.70, 0.71, max(Coord0,Coord1));
+
+</code></pre>
+    
+$$\begin{aligned}
+&\text{this would be the output if we set the bound to } [0.70\: ,\: 0.71]\\
+\end{aligned}$$
+    
+</div>
+
+<img src="Img/0.70_0.71.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<hr>
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float value =  smoothstep(0.00, 0.01, max(Coord0,Coord1));
+
+</code></pre>
+    
+$$\begin{aligned}
+&\text{this would be the output if we set the bound to } [0.00\: ,\: 0.01]\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/0.00_0.01.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<hr>
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float value =  smoothstep(-0.91, -0.90, max(Coord0,Coord1));
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{this would be the output if we set the bound to } [-0.91\: ,\: -0.90]\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/-0.91_-0.90.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<hr>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_Grid_SDF.shader">
+Shader_Grid_SDF.shader
+</a>
+    
+
+
+<!-- 
+_______  _______           _______  _______  _______    _______  ______   _______ 
+(  ____ \(  ___  )|\     /|(  ___  )(  ____ )(  ____ \  (  ____ \(  __  \ (  ____ \
+| (    \/| (   ) || )   ( || (   ) || (    )|| (    \/  | (    \/| (  \  )| (    \/
+| (_____ | |   | || |   | || (___) || (____)|| (__      | (_____ | |   ) || (__    
+(_____  )| |   | || |   | ||  ___  ||     __)|  __)     (_____  )| |   | ||  __)   
+      ) || | /\| || |   | || (   ) || (\ (   | (              ) || |   ) || (      
+/\____) || (_\ \ || (___) || )   ( || ) \ \__| (____/\  /\____) || (__/  )| )      
+\_______)(____\/_)(_______)|/     \||/   \__/(_______/  \_______)(______/ |/       
+-->
+
+
+
+<hr>
+<h1>SQUARE SDF</h1>
+<hr>
+
+
+<pre><code class="language-hlsl">
+
+fixed4 frag (PixelData i) : SV_Target
+{
+
+float2 uv = i.uv;
+float2 coordinateScale = uv * 2.0 - 1.0;
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+float Smoothing = 0.01;
+
+float2 squareDim = float2(0.5, 0.5);
+float2 vectorSpace = squareDim - abs(coordinateScale) ;
+
+float sdf = min(vectorSpace.x, vectorSpace.y) ;
+
+float shape = smoothstep(0.0, Smoothing, sdf);
+
+float4 col = float4(shape, shape, shape, 1.0); 
+                
+return col;
+
+}
+
+</code></pre>
+
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{All the ideas till this point are clear, the equalities that we had define till this point were all detail and specified throughfully.}\\
+\end{aligned}$$
+            
+<pre><code class="language-hlsl">
+
+float2 uv = i.uv;
+float2 coordinateScale = uv * 2.0 - 1.0;
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+float Smoothing = 0.01;
+        
+</code></pre>
+
+
+</div>
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{so we got to define how the next functions work together to make a square appear on our screen.}\\
+&\text{following the same steps we had done till this moment lets explain what is happening.}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+    
+float2 squareDim = float2(0.5, 0.5);
+float2 vectorSpace = squareDim - abs(coordinateScale) ;
+
+float sdf = min(vectorSpace.x, vectorSpace.y) ;
+
+float shape = smoothstep(0.0, Smoothing, sdf);
+
+float4 col = float4(shape, shape, shape, 1.0); 
+                
+
+</code></pre>
+
+</div>
+
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{The idea of the absolute value as we had define previously is that the points that are on the negative side }\\
+&\text{of the cartesian plane in the screen space are going to be operated in the positive side of the cartesian plane }\\
+&\text{in the computer space.}\\
+&\text{and with the substracions we are going to get the vectors that we could use to determine if the point falls }\\
+&\text{within the square or outside of the square. like this.}\\
+&\text{}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float2 vectorSpace = squareDim - abs(coordinateScale) ;
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{Imagine these random points but for all the screen that there is a point for each pixel, imagine that these points}\\
+&\text{work, as a representation of the points on the screen}\\
+&\text{but not on the screen cuz they are on the computer space. but try to think as if you could move it }\\
+&\text{and position them in the space, with the power of your freaking funkishiouslly imagination.}\\
+&\text{}\\
+\end{aligned}$$
+
+</div>
+        
+<img src="Img/SquareSDF_1.png"  style="display: block; margin: 0 auto; width: 50%;">
+<img src="Img/SquareSDF_2.png"  style="display: block; margin: 0 auto; width: 50%;">
+<img src="Img/SquareSDF_3.png"  style="display: block; margin: 0 auto; width: 50%;">
+<img src="Img/SquareSDF_4.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{Now that we are in this stage the procedure that we need to follow is to identify if the points fall or not within }\\
+&\text{the insides of the square, or rectangle, the thing with this algorithm is that it works for both cases}\\
+&\text{to make an square and to make a rectangle this procedure is going to work.}\\
+&\text{}\\
+\end{aligned}$$
+
+$$\\[5ex]\\$$
+
+$$\begin{aligned}
+&\text{But how we are able to get the information we need from all this points, what are the things that we need to set in}\\
+&\text{order for us to get the information that we need, from this data that was organize, well simple we just got to visualize }\\
+&\text{which is the data that we are getting from this representation.}\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/SquareSDF_Bound2.png"  style="display: block; margin: 0 auto; width: 50%;">
+<img src="Img/SquareSDF_BoundZoom2.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Once we had define this bounds, we can see a property that repeats and repeats continously through all this context}\\
+&\text{we can notice the properties and how they lay over the plane, for example we can see that the points that are going to be}\\
+&\text{inside the circle are also the points that lay within the 1 cuadrant of the cartesian plane when we make the next operation}\\
+\end{aligned}$$
+
+$$V_{sub} = \begin{pmatrix} 0.5 \\ 0.5 \end{pmatrix} - P_i$$
+
+$$\begin{aligned}
+&\text{Are going to be the poins that lay in the positive cuadrant of the cartesian plane, the points that are going to be part }\\
+&\text{of the square, and this is a property that we can exploit to represent the data how we want the data to be represented.}\\
+&\text{in this case a SQUARE}\\
+\end{aligned}$$
+
+</div>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{now the next property that we want to define is going to be the property that makes true if pixel we are evaluating in}\\
+&\text{the square should be painted or no, how we determined if the coordinates (x, y) fall in the square once we got the }\\
+&\text{vectors that lay in the area of the square, we could make a simple comparation on both of the sides like this.}
+\end{aligned}$$
+        
+<pre><code class="language-hlsl">
+
+float sdf = min(vectorSpace.x, vectorSpace.y) ;
+
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{with this concept in mind what we need to do is understand which vectors lay in the positive section, and which vector lay}\\
+&\text{in the negative area, cuz we already know that if the vector is on the positive then we are going to be inside the square.}\\
+&\text{so if we take the minimum of this vectors coordinates, we are going to get the highest possibility to check to find if the}\\
+&\text{coordinate point (vectorSpace), lays in the negative side, cuz if one of this two is negative then the vector is outside of}\\
+&\text{square, and if the coordinate is on the positive side, the coordinate (vectorSpace) the lesser amount would always be positive}\\
+&\text{}\\
+\end{aligned}$$ 
+
+</div>
+        
+
+
+<div style = "font-size: 21px">
+    
+<pre><code class="language-hlsl">
+
+float shape = smoothstep(0.0, Smoothing, sdf);
+        
+</code></pre>
+
+$$\begin{aligned}
+&\text{The idea with the smoothfunction here is to create a set of borders that we could use to define the values were the bounds are}\\
+&\text{define, in a way that we could make sense of.}\\
+&\text{for example we know that when the vectors are negative are going to be outside of the square, but if the vectors are positive } \\
+&\text{then we are going to be inside in the square, so the idea here is to identify where exactly they turn into negative into positive} \\
+&\text{or you could think from positive to negative.} \\
+&\text{The idea here is to identify where the borders are, so we could aply the rule, paint if this, and dont paint if this, in this case} \\
+&\text{we are going to paint when the numbers are positive and if negative we are not going to paint.} \\
+&\text{and thats what the smoothstep is doing making the definition of the previous sentence true.} \\
+\end{aligned}$$
+
+$$ smoothstep(0.0,\ 0.01,\ sdf) \implies black < [0.0,\ 0.01] < white$$
+
+</div>
+
+<img src="Img/SquareSDF_BoundZoom2_SMOOTH.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+    
+$$\begin{aligned}
+&\text{so here we are going to notice also that the points are going to get closer to the negative side at the axixes x and y}\\
+&\text{which means that it is more posible to find or get points closer to 0, if we get closer to the axis, which is very obvious right?}\\
+&\text{}\\
+\end{aligned}$$
+    
+</div>
+        
+<img src="Img/SquareSDF_BoundZoom2_SMOOTH_text.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{here the smoothfucntion would make the previous operation as the way to paint. as the way to paint more and more information}\\
+&\text{when the min is the x that means that we are closer to the y axis, but when the min is the y means that we are closer to the }\\
+&\text{x axis. }\\
+\end{aligned}$$
+
+</div>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_Square0_SDF.shader">
+    Shader_Square0_SDF.shader 
+</a>
+           
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_Square1_SDF.shader">
+    Shader_Square1_SDF.shader 
+</a>
+
+
+
+<!-- 
+_______  _______           _______  _______  _______    _______  _______  _______  _______  _______  _______  _______ 
+(  ____ \(  ___  )|\     /|(  ___  )(  ____ )(  ____ \  (  ____ \(  ___  )(       )(  ____ )(  ___  )(  ____ )(  ____ \
+| (    \/| (   ) || )   ( || (   ) || (    )|| (    \/  | (    \/| (   ) || () () || (    )|| (   ) || (    )|| (    \/
+| (_____ | |   | || |   | || (___) || (____)|| (__      | |      | |   | || || || || (____)|| (___) || (____)|| (__    
+(_____  )| |   | || |   | ||  ___  ||     __)|  __)     | |      | |   | || |(_)| ||  _____)|  ___  ||     __)|  __)   
+      ) || | /\| || |   | || (   ) || (\ (   | (        | |      | |   | || |   | || (      | (   ) || (\ (   | (      
+/\____) || (_\ \ || (___) || )   ( || ) \ \__| (____/\  | (____/\| (___) || )   ( || )      | )   ( || ) \ \__| (____/\
+\_______)(____\/_)(_______)|/     \||/   \__/(_______/  (_______/(_______)|/     \||/       |/     \||/   \__/(_______/
+-->
+
+<hr>
+<hr>
+<h1 style="font-size: 40px;"><b> SQUARE COMPARE </b></h1>
+<br>
+
+<hr>
+<div style = "font-size: 21px">
+    
+$$\LARGE\text{SQUARE COMPARE}$$
+
+</div>        
+<hr>
+
+<br>
+
+<div style = "font-size: 21px">
+ 
+$$\begin{aligned}
+&\text{There is a way to get the square following a different process, or a different set of rules that could allow us to get}\\
+&\text{a similar output, not entirely the same but a very similar one.}\\
+\end{aligned}$$
+        
+<pre><code class="language-hlsl">
+            
+float2 uv = i.uv;
+float2 coordinateScale = uv * 2.0 - 1.0;
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
+float2 size = float2(0.5, 0.5);
+float2 bounds = (abs(coordinateScale));
+
+float4 col = colorBlack; 
+
+if (bounds.x <= size.x && bounds.y <= size.y && bounds.x >= 0.0 && bounds.y >= 0.0)
+{
+
+    col = fixed4(1.0, 1.0, 1.0, 1.0);
+    
+}
+
+return col;
+
+</code></pre>
+        
+$$\begin{aligned}
+&\text{The ideas that we need to clarify here are base on a simple representation of the information, in a more intuitive way}\\
+&\text{for example, the idea of the abs() function is very clear to this point, the information that we had detail is very}\\
+&\text{straighforward, we are maping the points from one the screen space in the computer space to behave differently so we}\\
+&\text{could make the representation and behavior of this elements to work a little bit more like we do like them to work.}\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+ 
+<pre><code class="language-hlsl">
+
+float2 size = float2(0.5, 0.5);       
+float2 bounds = (abs(coordinateScale));
+
+float4 col = colorBlack; 
+
+if (bounds.x <= size.x && bounds.y <= size.y && bounds.x >= 0.0 && bounds.y >= 0.0)
+{
+
+col = fixed4(1.0, 1.0, 1.0, 1.0);
+
+}
+
+return col;
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{The only two lines that we got to explain are going to be this ones. }\\
+\end{aligned}$$
+$$\text{float2 bounds} = (\text{abs}(\text{coordinateScale}))$$
+$$\text{if (bounds.x} \le \text{size.x \&\& bounds.y} \le \text{size.y \&\& bounds.x} \ge 0.0 \text{ \&\& bounds.y} \ge 0.0\text{)}$$
+
+
+$$\begin{aligned}
+&\text{lets explain what is happening in the first line, the information that we are noticing here, is as previously explain}\\
+&\text{a mapping of the values from one of space to another space, and a space is just a way to represent information with  }\\
+&\text{particular properties. }\\
+\end{aligned}$$
+
+</div>
+
+<div style = "font-size: 21px">
+ 
+<pre><code class="language-hlsl">
+if (bounds.x <= size.x && bounds.y <= size.y && bounds.x >= 0.0 && bounds.y >= 0.0)
+{
+
+col = fixed4(1.0, 1.0, 1.0, 1.0);
+
+}
+</code></pre>
+
+$$\begin{aligned}
+&\text{The prevoius line what is going to help us with, is to represent the bounds in this particular way }\\
+&\text{if the point is within this borders, then the point is with the square if not then it dont.}\\
+\end{aligned}$$
+
+</div>
+        
+<img src="Img/Square_Borders.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{So the only information that we need to clarify here, is going to be which points fulfill all the }\\
+&\text{conditions and once the information is confirm we can make the modification of the values that we are }\\
+&\text{going to use to paint the color.}\\
+\end{aligned}$$
+
+</div>
+
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane/blob/main/Scripts/Shader_SquareCompare_SDF.shader">
+    Shader_SquareCompare_SDF.shader 
+</a>
+
+
+<hr>
+<h1 style="font-size: 30px;"><b> End </b></h1>
+<hr>
+
+    
+
+<!-- 
+_______  _        ______     _  _  _ 
+(  ____ \( (    /|(  __  \   ( )( )( )
+| (    \/|  \  ( || (  \  )  | || || |
+| (__    |   \ | || |   ) |  | || || |
+|  __)   | (\ \) || |   | |  | || || |
+| (      | | \   || |   ) |  (_)(_)(_)
+| (____/\| )  \  || (__/  )   _  _  _ 
+(_______/|/    )_)(______/   (_)(_)(_)
+
+-->
+
+
+<br>
+<br>
+
+<a href="https://andreality1.github.io/Mathematics-Code_INDEX/">
+    <h1 style="font-size: 40px; color: #03B5BE; text-decoration: underline;">
+    <b>
+            Mathematics-Code_INDEX
+    </b>
+    </h1>
+</a>
+
+
+</div>
+
+<br>
+<br>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+	
+        <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+        <!-- <script>window.jQuery </script> -->
+        <!-- <script src="script.js"></script> -->
+
+
+    </body>
+</html>
+
