@@ -38,9 +38,9 @@
 </h1>
 
 <h1>
-	<a>
+<a>
 		<strong>Math Explanation CODE relations</strong>
-	</a>
+</a>
 </h1>	
     
 <p class="siteSub">
@@ -57,20 +57,24 @@ From Andraelity, how CODE using math.
 
 <div class="articleRight">
     
-    <div  class="articleRightInner">
+<div  class="articleRightInner">
 
-      <img width="400"  src="Img/BlueprintCode.png" class="center">
-      <br>  
+<img width="400"  src="Img/BluePrintForIndex.png" class="center">
+<br>  
 <a target = "_blank" href="https://www.youtube.com/channel/UC-4AaN4M3Sq1lY6NVZnfaEw">Youtube/Andreality</a>
 </div>
 </div>
 <p>
-	<strong>Shaders-Plane</strong>
+    
+<strong>Shaders-PLANE-PolyG</strong>
 
+Right now the ideas that we're been handling is base entirely in a representation of information that is going to be part of a more practical representaion of 
+visuals, what we need to clarify now is how we are able to make use of this rules in this particular way, the way that allow us represent information in the way 
+want, or more than that, not just represent but visualize information in this particular way.
 
-After we had define exactly how the idea of shaders work, and which are the primary concepts that we understand about computer, the process we are going to follow
-would be to start making outputs on graphic structures at the same time that we understand and comprehend the mathematical structures that are going to provide us 
-with the step by step to achieve visual representations and overall systematic representation of information and graphical relationships.
+<br>
+
+With FIGURINES
 
 </p>
 
@@ -79,8 +83,8 @@ with the step by step to achieve visual representations and overall systematic r
         
 
 <div class="contentsPanel">
-    <div class="contentsHeader">Index Webpages Redirect</div>
-    <ul>
+<div class="contentsHeader">Index Webpages Redirect</div>
+<ul>
 
 
 <li><span>&.</span><a href="https://andreality1.github.io/Mathematics-Code_INDEX/"> Index</a></li>
@@ -119,23 +123,30 @@ with the step by step to achieve visual representations and overall systematic r
 <!-- <h1><b><a href="https://andraelity.github.io/WebPageVideoTest/" > https://andraelity.github.io/WebPageVideoTest/ </a></b></h1> -->
 <!-- <h1><b><a> Factorial Identification </a></b></h1> -->
 
-
 <!-- 
-_______ _________ _______  _______  _        _______  _______  ______   _______ 
-(  ____ \\__   __/(  ____ )(  ____ \( \      (  ____ \(  ____ \(  __  \ (  ____ \
-| (    \/   ) (   | (    )|| (    \/| (      | (    \/| (    \/| (  \  )| (    \/
-| |         | |   | (____)|| |      | |      | (__    | (_____ | |   ) || (__    
-| |         | |   |     __)| |      | |      |  __)   (_____  )| |   | ||  __)   
-| |         | |   | (\ (   | |      | |      | (            ) || |   ) || (      
-| (____/\___) (___| ) \ \__| (____/\| (____/\| (____/\/\____) || (__/  )| )      
-(_______/\_______/|/   \__/(_______/(_______/(_______/\_______)(______/ |/       
+_________ _______ _________ _______  _        _______  _        _______          
+\__   __/(  ____ )\__   __/(  ___  )( (    /|(  ____ \( \      (  ____ \         
+   ) (   | (    )|   ) (   | (   ) ||  \  ( || (    \/| (      | (    \/         
+   | |   | (____)|   | |   | (___) ||   \ | || |      | |      | (__             
+   | |   |     __)   | |   |  ___  || (\ \) || | ____ | |      |  __)            
+   | |   | (\ (      | |   | (   ) || | \   || | \_  )| |      | (               
+   | |   | ) \ \_____) (___| )   ( || )  \  || (___) || (____/\| (____/\         
+   )_(   |/   \__/\_______/|/     \||/    )_)(_______)(_______/(_______/         
                                                                                  
+ _______  _______  _______ _________ _______  _        _______  _        _______ 
+(  ____ )(  ____ \(  ____ \\__   __/(  ___  )( (    /|(  ____ \( \      (  ____ \
+| (    )|| (    \/| (    \/   ) (   | (   ) ||  \  ( || (    \/| (      | (    \/
+| (____)|| (__    | |         | |   | (___) ||   \ | || |      | |      | (__    
+|     __)|  __)   | |         | |   |  ___  || (\ \) || | ____ | |      |  __)   
+| (\ (   | (      | |         | |   | (   ) || | \   || | \_  )| |      | (      
+| ) \ \__| (____/\| (____/\   | |   | )   ( || )  \  || (___) || (____/\| (____/\
+|/   \__/(_______/(_______/   )_(   |/     \||/    )_)(_______)(_______/(_______/
 -->
 
 <hr>
 <hr>
-<h1 style="font-size: 40px;"id ="CircleSDF"><b> CircleSDF</b></h1>
 
+<h1 style="font-size: 40px;"id ="CircleSDF"><b> TriangleRectangle SDF </b></h1>
 
 
 <div style = "font-size: 21px">
@@ -143,37 +154,39 @@ _______ _________ _______  _______  _        _______  _______  ______   _______
 
 <pre><code class="language-hlsl">
 
-    
 fixed4 frag (PixelData i) : SV_Target
 {
 
 float2 uv =  i.uv ;
-float4 col = float4(0,0,0,1);
-float4 red = float4(1,0,0,1);
-float4 white = float4(1,1,1,1);
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
 
 float2 coordinateScale = (uv * 2.0)  - 1.0;
 
-float2 coor = coordinateScale;
+float2 size = float2(0.5 ,0.5);
 
-float radius = 0.5;
+float2 screenSpace = coordinateScale;
 
-float number = length(coor) - radius;
+float disHypotenuse = dot(screenSpace, size) - (size.x * size.y); 
 
-float smooth = 1.0 - smoothstep(0.0, 0.01, number );                
+float sdf =  sign(dHypotenuse) < 0 && position.y > 0 && position.x > 0 ? dHypotenuse : 1.0 ;
 
-col = fixed4(smooth, 0.0, 0.0, 1.0);
+float shader = 1.0 - smoothstep(0.0, 0.01, sdf);
 
-return col;
+float4 col = colorBlack;
+
+col = fixed4(shader, shader, shader, 1.0);
     
 }
+
 </code></pre>
 
 $$\begin{aligned}
-&\text{what we need to define right now is something that could allow us to to explain the difference between the previous theory}\\
-&\text{of circle drawing, once we had identify this elements once we identify how to create a relationship between distances and }\\
-&\text{identity properties is when we are going to be able to specify which procedures allow us to get information that we need }\\
-&\text{from the equations.}\\
+&\text{All the thinsg that we had done since are very clear, the steps that we must take into consideration ahead}\\
+&\text{are going to be the next ones, there are things that we had already define like always from the beginning of this }\\
+&\text{series.}\\
 \end{aligned}$$
 
 </div>
@@ -183,23 +196,18 @@ $$\begin{aligned}
 <pre><code class="language-hlsl">
 
 float2 uv =  i.uv ;
-float4 col = float4(0,0,0,1);
-float4 red = float4(1,0,0,1);
-float4 white = float4(1,1,1,1);
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
 
 float2 coordinateScale = (uv * 2.0)  - 1.0;
 
-float2 coor = coordinateScale;
 
-float radius = 0.5;
-    
 </code></pre>
     
 $$\begin{aligned}
-&\text{Everything from this point on before is pretty straight forward all the information here is very well describe }\\
-&\text{and the operation on each pixel was very well describe. and the information was set, only we required to explain }\\
-&\text{is the steps ahead and how each operation allows us to define limits of identity, that we could use to create }\\
-&\text{information and details.}\\
+&\text{Everything till this points looks very straight forward, and all the information presented here is clear, so}\\
+&\text{lets continue by more steps that we could use to clarify to understand more concepts .}\\
 \end{aligned}$$
 
 </div>
@@ -209,24 +217,103 @@ $$\begin{aligned}
 
 <pre><code class="language-hlsl">
 
-float number = length(coor) - radius;
-   
-float smooth = 1.0 - smoothstep(0.0, 0.01, number );                
-
-col = fixed4(smooth, 0.0, 0.0, 1.0);
-
-return col;
+float2 size = float2(0.5 ,0.5);
     
+float2 screenSpace = float2(coordinateScale.x , coordinateScale.y);
+
+float disHypotenuse = dot(screenSpace, size) - (size.x * size.y); 
+
+float sdf =  sign(dHypotenuse) < 0 && position.y > 0 && position.x > 0 ? dHypotenuse : 1.0 ;
+        
 </code></pre>
     
-$$\begin{aligned}
-&\text{ This is going to be the set of functions that we need to clarify in order to make understanding of how this values}\\
-&\text{ are being represented, logically this representations. }\\
-\end{aligned}$$
 
 </div>
 
-<img src="Img/CircleDrawSmooth.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Lets explain the meaning of each single of this lines of code, and how they work combine to represent information.}\\
+&\text{The assignation of vales on the first two lines of code is really straight forward.}\\
+\end{aligned}$$
+                
+<pre><code class="language-hlsl">
+
+float2 size = float2(0.5 ,0.5);
+
+float2 screenSpace = float2(coordinateScale.x , coordinateScale.y);
+                
+</code></pre>
+                
+$$\begin{aligned}
+&\text{the things that we need to describe here is the formula for the line, that we could represent is the information }\\
+&\text{is discribe in this particular way, the representation of the dot product, a formula that we need to review throughfully }\\
+&\text{cuz its meaning could be reorganize multiple times along the theories many many many times. }\\
+\end{aligned}$$
+
+</div>    
+                
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float disHypotenuse = dot(screenSpace, size) - (size.x * size.y); 
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{The idea that we need to represent is how to draw a right triangle, so once we had define what a right triangle is we can continue}\\
+&\text{reprenseting more values.}\\
+&\text{So whats is a right triangle, a right triangle is a triangle form with two vectors, that are perpendicular to each other, with another }\\
+&\text{vector connecting them, lets place this vectors in the origin for more clarity.}\\
+\end{aligned}$$
+
+</div>    
+          
+<img src="Img/TriangleRectangleVectors.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+
+<div style = "font-size: 21px">
+
+
+$$\begin{aligned}
+&\text{This looks like a triangle to me, so the idea that we need to clarify is how we could get the points inside this triangle, }\\
+&\text{ like literally all the points, how we are able to identify which points are going to be inside and outside of the triangle}\\
+&\text{To be able to do that is going to be necessary for us to identify the borders, why cuz if the point is within the borders}\\
+&\text{then we'll be able to comprehend which point lay or not in the section, or triangle.}\\
+&\text{reprenseting more values.}\\
+\end{aligned}$$
+
+
+<pre><code class="language-hlsl">
+
+float disHypotenuse = dot(screenSpace, size) - (size.x * size.y); 
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{so the first things that we need to identify is which points lay the side of the hypothenuse which is going to be the vector }\\
+&\text{make out of difference between the perpendicular vectors position in the axis of the cartesian plane }\\
+
+&\text{}\\
+&\text{}\\
+
+\end{aligned}$$
+
+$$\vec{v}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$$
+$$\\[5ex]\\$$
+$$\vec{v}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+$$\\[5ex]\\$$
+$$\vec{v}_{conn} = \vec{v}_1 - \vec{v}_2$$
+$$\\[5ex]\\$$
+$$\vec{v}_{conn} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} - \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$$
+
+</div>    
+        
+
 
 <hr>
 <div style = "font-size: 21px">
