@@ -1,0 +1,1210 @@
+<!doctype html>
+<html class="no-js" lang="en">
+	<meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <head>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+        
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+        <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" 
+        onload="renderMathInElement(document.body);"></script>
+        <link rel="stylesheet" href="style.css">
+        
+
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-okaidia.min.css" rel="stylesheet" />
+        <style>
+            
+                pre[class*="language-"], 
+                code[class*="language-"] {
+                    background: #000000 !important; /* Pure Black */
+                    color: #ffffff !important;      /* Ensure base text is white */
+                }
+        </style>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>    
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-python.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-cpp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-csharp.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-hlsl.min.js"></script>
+        
+    </head>
+<body style="background-color: #000000 ">
+<div class="article">
+
+<h1>
+<a>
+		<strong>Matemathics Explanations of Plot Programming</strong>
+	</a>
+</h1>
+
+<h1>
+<a>
+		<strong>Math Explanation CODE relations</strong>
+</a>
+</h1>	
+    
+<p class="siteSub">
+
+From Andraelity, how CODE using math. 
+
+</p>
+
+<p class="roleNote">
+
+    In thy following lines we are going to verify or create the connexion that would allow us to unite code with mathematics
+
+</p>
+
+<div class="articleRight">
+    
+<div  class="articleRightInner">
+
+<img width="400"  src="Img/BluePrintForIndex.png" class="center">
+<br>  
+<a target = "_blank" href="https://www.youtube.com/channel/UC-4AaN4M3Sq1lY6NVZnfaEw">Youtube/Andreality</a>
+</div>
+</div>
+<p>
+    
+<strong>Shaders-PLANE-PolyG</strong>
+
+Right now the ideas that we're been handling is base entirely in a representation of information that is going to be part of a more practical representaion of 
+visuals, what we need to clarify now is how we are able to make use of this rules in this particular way, the way that allow us represent information in the way 
+want, or more than that, not just represent but visualize information in this particular way.
+
+<br>
+
+With FIGURINES
+
+</p>
+
+
+
+        
+
+<div class="contentsPanel">
+<div class="contentsHeader">Index Webpages Redirect</div>
+<ul>
+
+
+<li><span>&.</span><a href="https://andreality1.github.io/Mathematics-Code_INDEX/"> Index</a></li>
+<li><span>0.</span><a href="https://andreality1.github.io/Mathematics-Code-EulersIdentiy/"> EulersIdentity</a></li>
+<li><span>1.</span><a href="https://andreality1.github.io/Mathematics-Code-Derivatives/"> Derivatives</a></li>
+<li><span>2.</span><a href="https://andreality1.github.io/Mathematics-Code-Shaders/"> Shaders</a></li>
+            
+
+</ul>
+</div>
+
+<!-- 
+    
+ _______           _______  ______   _______  _______  _______ 
+(  ____ \|\     /|(  ___  )(  __  \ (  ____ \(  ____ )(  ____ \
+| (    \/| )   ( || (   ) || (  \  )| (    \/| (    )|| (    \/
+| (_____ | (___) || (___) || |   ) || (__    | (____)|| (_____ 
+(_____  )|  ___  ||  ___  || |   | ||  __)   |     __)(_____  )
+      ) || (   ) || (   ) || |   ) || (      | (\ (         ) |
+/\____) || )   ( || )   ( || (__/  )| (____/\| ) \ \__/\____) |
+\_______)|/     \||/     \|(______/ (_______/|/   \__/\_______)
+ _______  _______  _______  _______          _________ _______  _______ 
+(  ____ \(  ____ )(  ___  )(  ____ )|\     /|\__   __/(  ____ \(  ____ \
+| (    \/| (    )|| (   ) || (    )|| )   ( |   ) (   | (    \/| (    \/
+| |      | (____)|| (___) || (____)|| (___) |   | |   | |      | (_____ 
+| | ____ |     __)|  ___  ||  _____)|  ___  |   | |   | |      (_____  )
+| | \_  )| (\ (   | (   ) || (      | (   ) |   | |   | |            ) |
+| (___) || ) \ \__| )   ( || )      | )   ( |___) (___| (____/\/\____) |
+(_______)|/   \__/|/     \||/       |/     \|\_______/(_______/\_______)
+                                                                         
+-->
+
+
+
+<h2 style="font-size: 50px;" ><strong>Computer Shaders Graphics</strong></h2>
+<!-- <h1><b><a href="https://andraelity.github.io/WebPageVideoTest/" > https://andraelity.github.io/WebPageVideoTest/ </a></b></h1> -->
+<!-- <h1><b><a> Factorial Identification </a></b></h1> -->
+
+<!-- 
+_________ _______ _________ _______  _        _______  _        _______          
+\__   __/(  ____ )\__   __/(  ___  )( (    /|(  ____ \( \      (  ____ \         
+   ) (   | (    )|   ) (   | (   ) ||  \  ( || (    \/| (      | (    \/         
+   | |   | (____)|   | |   | (___) ||   \ | || |      | |      | (__             
+   | |   |     __)   | |   |  ___  || (\ \) || | ____ | |      |  __)            
+   | |   | (\ (      | |   | (   ) || | \   || | \_  )| |      | (               
+   | |   | ) \ \_____) (___| )   ( || )  \  || (___) || (____/\| (____/\         
+   )_(   |/   \__/\_______/|/     \||/    )_)(_______)(_______/(_______/         
+                                                                                 
+ _______  _______  _______ _________ _______  _        _______  _        _______ 
+(  ____ )(  ____ \(  ____ \\__   __/(  ___  )( (    /|(  ____ \( \      (  ____ \
+| (    )|| (    \/| (    \/   ) (   | (   ) ||  \  ( || (    \/| (      | (    \/
+| (____)|| (__    | |         | |   | (___) ||   \ | || |      | |      | (__    
+|     __)|  __)   | |         | |   |  ___  || (\ \) || | ____ | |      |  __)   
+| (\ (   | (      | |         | |   | (   ) || | \   || | \_  )| |      | (      
+| ) \ \__| (____/\| (____/\   | |   | )   ( || )  \  || (___) || (____/\| (____/\
+|/   \__/(_______/(_______/   )_(   |/     \||/    )_)(_______)(_______/(_______/
+-->
+
+<hr>
+<hr>
+
+<h1 style="font-size: 40px;" id ="TriangleSDF"><b> TriangleRectangle SDF </b></h1>
+
+
+<img src="Img/TriangleRectangleShader.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<div style = "font-size: 21px">
+
+
+<pre><code class="language-hlsl">
+
+fixed4 frag (PixelData i) : SV_Target
+{
+
+float2 uv =  i.uv ;
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float2 size = float2(0.5 ,0.5);
+
+float2 screenSpace = coordinateScale;
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+float sdf =  ( sign(disHypotenuse) < 0 && screenSpace.y > 0 && screenSpace.x > 0 ) ? 1.0 : 0.0 ;
+
+float4 col = colorBlack;
+
+col = fixed4(sdf, sdf, sdf, 1.0);
+    
+}
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{All the thinsg that we had done since are very clear, the steps that we must take into consideration ahead}\\
+&\text{are going to be the next ones, there are things that we had already define like always from the beginning of this }\\
+&\text{series.}\\
+\end{aligned}$$
+
+</div>
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float2 uv =  i.uv ;
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+</code></pre>
+    
+$$\begin{aligned}
+&\text{Everything till this points looks very straight forward, and all the information presented here is clear, so}\\
+&\text{lets continue by more steps that we could use to clarify to understand more concepts .}\\
+\end{aligned}$$
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float2 size = float2(0.5 ,0.5);
+    
+float2 screenSpace = coordinateScale;
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+float sdf =  ( sign(disHypotenuse) < 0 && screenSpace .y > 0 && screenSpace.x > 0 ) ? 1.0 : 0.0 ;
+        
+</code></pre>
+    
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Lets explain the meaning of each single of this lines of code, and how they work combine to represent information.}\\
+&\text{The assignation of vales on the first two lines of code is really straight forward.}\\
+\end{aligned}$$
+                
+<pre><code class="language-hlsl">
+
+float2 size = float2(0.5 ,0.5);
+
+float2 screenSpace = coordinateScale;
+                
+</code></pre>
+                
+$$\begin{aligned}
+&\text{the things that we need to describe here is the formula for the line, that we could represent is the information }\\
+&\text{is discribe in this particular way, the representation of the dot product, a formula that we need to review throughfully }\\
+&\text{cuz its meaning could be reorganize multiple times along the theories many many many times. }\\
+\end{aligned}$$
+
+</div>    
+                
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{The idea that we need to represent is how to draw a right triangle, so once we had define what a right triangle is we can continue}\\
+&\text{reprenseting more values.}\\
+&\text{So whats is a right triangle, a right triangle is a triangle form with two vectors, that are perpendicular to each other, with another }\\
+&\text{vector connecting them, lets place this vectors in the origin for more clarity.}\\
+\end{aligned}$$
+
+</div>    
+          
+<img src="Img/TriangleRectangleVectors.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<hr>
+<hr>
+<h1 style="font-size: 40px;"id ="LineSDF"><b> LineSDF </b></h1>
+
+<br>
+<br>
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{This looks like a triangle to me, so the idea that we need to clarify is how we could get the points inside this triangle, }\\
+&\text{ like literally all the points, how we are able to identify which points are going to be inside and outside of the triangle}\\
+&\text{To be able to do that is going to be necessary for us to identify the borders, why cuz if the point is within the borders}\\
+&\text{then we'll be able to comprehend which point lay or not in the section, or triangle.}\\
+&\text{reprenseting more values.}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+</code></pre>
+
+$$\begin{aligned}
+&\text{so the first things that we need to identify is which points lay on each side of the hypothenuse, }\\
+&\text{to do this we need to ask, which are the vectors that make out the perpendiculars sides of the triangle}\\
+&\text{and how we position this vectors in the axis of the cartesian plane is the key factor here}\\
+&\text{}\\
+\end{aligned}$$
+
+$$\vec{v}_1 = \begin{bmatrix} 1 \\ 0 \end{bmatrix}$$
+$$\\[5ex]\\$$
+$$\vec{v}_2 = \begin{bmatrix} 0 \\ 1 \end{bmatrix}$$
+$$\\[5ex]\\$$
+$$\vec{v}_{conn} = \vec{v}_1 - \vec{v}_2$$
+$$\\[5ex]\\$$
+$$\vec{v}_{conn} = \begin{bmatrix} 1 \\ 0 \end{bmatrix} - \begin{bmatrix} 0 \\ 1 \end{bmatrix} = \begin{bmatrix} 1 \\ -1 \end{bmatrix}$$
+
+
+$$\\[5ex]\\$$
+
+$$\begin{aligned}
+&\text{but if we plot this three vectors then we are going to get the next thing.}\\
+\end{aligned}$$
+</div>    
+        
+
+<img src="Img/TriangleRectangleAll.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{so the idea would be to identify what can we do with this information to make a representation of the ideas}\\
+&\text{that we want to make reality, which are the key ingredients that we need to set up in this field.}\\
+&\text{lets begin with the most difficult thing to define between the three, lets define the hipothenuse.}\\
+&\text{what we need to do with the hypothenusa, from the hypothenusa, what defines a hypothenusa? }\\
+&\text{very important questions about the hypothenusa }\\
+&\text{but overall from which place we can detail its existence.}\\
+\end{aligned}$$
+
+$$\text{RandomPoint =}\ \ (x, y)$$
+$$\text{PointInTheLine =}\ \ (x_1, y_1)$$
+
+$$\text{The slope of the line is define by} \ \ m$$ 
+$$m = \frac{y - y_1}{x - x_1}$$
+
+</div>    
+                
+<img src="Img/SlopeGraphFunction.png"  style="display: block; margin: 0 auto; width: 50%;">
+    
+<div style = "font-size: 21px">
+
+$$\\[5ex]$$
+
+$$y = mx + b$$
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{This is the conventional idea of a function, you get a value for each number of the real numbers}\\ 
+&\text{in this case the real numbers are represented by the cartesian plane x axis.}\\
+\end{aligned}$$
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{So what the values represent in this function?, the idea is to clarify what does each value do.}\\ 
+&\text{what does the values of the constants that made up this function do.}\\
+\end{aligned}$$
+
+$$\text{The slope of the line is define by} \ \ m$$ 
+
+$$\begin{aligned}
+&\text{So what is a slope, a slope is the reason of change, of the "x" values in the "y" values}\\ 
+&\text{the constant that made up this function.}\\
+\end{aligned}$$
+
+</div>
+
+<img src="Img/PlaneCartesianSlope.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{The idea with the m slope, is to make the "y" values be "m" times the "x"}\\ 
+&\text{which is the same idea as modify the space, of the real numbers to make it increment or}\\ 
+&\text{descrease its values, like an scalation of the values, but for all the values in the real numbers}\\ 
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{The second element that we need to define is the "b", which is the point where we want the}\\ 
+&\text{line to start, only in this particular representation of the line, it works like this, the }\\ 
+&\text{variable "b", represent from which positin of the input "x" we want the escalations to begin }\\ 
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{one particularity of this representation of the line, is that if you want to get the values}\\ 
+&\text{of the line to cut always both of the axis, in the same point for both the "x" and the "y" axis }\\ 
+&\text{at the same time, the value of the m = 1}\\ 
+\end{aligned}$$
+
+$$\\[5ex]$$
+
+$$y = mx + b$$
+
+$$\\[5ex]$$
+
+$$m = 1$$
+
+$$\\[5ex]$$
+
+$$y = ( 1) x + b$$
+
+$$\\[5ex]$$
+
+$$if \ x = 0 \ \& \ b = 2$$
+
+$$\\[5ex]$$
+
+$$y = ( 1) (0) + 2$$
+
+$$\\[5ex]$$
+
+$$y = 2$$
+
+$$\text{cuts the line in the Y axis in }2$$
+
+$$\\[10ex]$$
+
+
+$$and\ if \ y = 2 \ \& \ b = 2$$
+
+$$\\[5ex]$$
+
+$$y = ( 1) x + 2$$
+
+$$\\[5ex]$$
+
+$$y - 2 = ( 1) x $$
+
+$$\\[5ex]$$
+
+$$y = 0$$
+
+$$\\[5ex]$$
+
+$$ 0 - 2 = ( 1) x $$
+
+$$\\[5ex]$$
+
+$$ x = - 2 $$
+
+$$\text{cuts the line in the X axis in }-2$$
+
+$$\\[5ex]$$
+
+
+
+</div>
+
+<img src="Img/SlopeEqualXandY.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Something that you could also do, is get the specific points where you want the line to cut the axis}\\ 
+&\text{by following this formula.}\\ 
+&\text{}\\ 
+\end{aligned}$$
+
+$$y = \left( -\frac{u}{o} \right) x + u$$
+
+$$\\[5ex]$$
+
+$$\text{now if we want to find the } u \\ $$
+
+$$\\[5ex]$$
+
+$$y = m(0) + u$$
+
+$$\\[5ex]$$
+
+$$y = u$$
+
+$$\\[5ex]$$
+
+$$\text{now if we want to find the } o \\ $$
+
+$$\\[5ex]$$
+
+$$y = 0$$
+
+$$\\[5ex]$$
+
+$$x = o \xrightarrow{\text{point to find }} \ (o, 0)$$
+
+$$\\[5ex]$$
+
+$$0 = m(o) + u \\ \\$$
+
+$$\\[5ex]$$
+
+$$-u = mo \\ \\$$
+
+$$\\[5ex]$$
+
+$$m = -\frac{u}{o}$$
+
+$$\\[5ex]$$
+
+$$\text{and thats how we could make the next thing to be possible} \\ $$
+
+$$y = \left( -\frac{u}{o} \right) x + u$$
+
+$$\\[5ex]$$
+
+$$\text{In the next example:}$$
+
+$$o = 2 $$
+$$u = 3 $$
+
+</div>
+
+<img src="Img/Slope_SelectXandY.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<br>
+
+<br>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{This would be the first form to represent the line, which is the most common, and a list-ingy}\\ 
+&\text{and single computer processor, to think about this way to express the line.}\\ 
+&\text{descrease its values, like an scalation of the values, for all the values in the real numbers}\\ 
+\end{aligned}$$
+        
+$$\begin{aligned}
+&\text{now there is a second way to make the representation of the line, and it would be by using  }\\ 
+&\text{VECTORS, a structured of thought that is a little bit more computational parallel multiple core,  }\\ 
+&\text{processors, rather than a expression more listy single processor thinking. }\\ 
+&\text{and the idea is based entirely on this expression}\\ 
+\end{aligned}$$
+
+$$\\[5ex]$$
+
+$$0 = \mathbf{n} \cdot \mathbf{p}$$
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{Yes, i am telling you that the equation of the line could be derived from the dot product.}\\ 
+&\text{and its pretty simple to imagine .}\\ 
+\end{aligned}$$
+
+$$\\[5ex]$$
+
+$$\mathbf{n}  = (a, \, b) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{p}  = (x, \, y) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} = (a \cdot x) + (b \cdot y)$$
+
+</div>
+
+<div style = "font-size: 21px">
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{So the main idea when you take the dot product is that it would return 3 type of things,}\\ 
+&\text{and its pretty simple to imagine .}\\ 
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{Points where \ } \mathbf{n} \cdot \mathbf{p} = 0 \ \| \text{the angle between these two vectors is exactly 90 }\degree\\
+&\text{Points where \ } \mathbf{n} \cdot \mathbf{p} > 0 \ \| \text{the angle between these two vectors is lesser than 90)\degree}\\
+&\text{Points where \ } \mathbf{n} \cdot \mathbf{p} < 0 \ \| \text{the angle between these two vectors is greater than 90)\degree }\\
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{But also this representation, also contains a more deeper meaning, on regards of how the line is draw }\\ 
+&\text{for example on this same ideas we can identify this concepts like this.}\\ 
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{Points where \ } \mathbf{n} \cdot \mathbf{p} = 0 \ \| \text{The coordinates (x,y) are part of the line }\\
+&\text{Points where \ } \mathbf{n} \cdot \mathbf{p} > 0 \ \| \text{The coordinates (x,y) reflect on the n vector)}\\
+&\text{Points where \ } \mathbf{n} \cdot \mathbf{p} < 0 \ \| \text{The coordinates (x,y) do not reflect on the n vector)}\\
+\end{aligned}$$
+
+$$\begin{aligned}
+&\text{which are litterally the same thing, just visualize from an another angle, jaja jokes.}\\ 
+&\text{get it is like doing the explanation of the first things, but is not the first thing cuz it not on angles.}\\ 
+\end{aligned}$$
+
+</div>
+
+<img src="Img/VectorAngleDotProduct.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<br>
+
+<img src="Img/PlaneSignedDistanceDotProduct.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Now one particularity that we could make here to happen, is the offset, but offset from what.}\\ 
+&\text{in this case, you know what would be really awesome, to make the line be moved to the position we }\\ 
+&\text{want it to be translated to, so the offset in this case would be the way we could make the line to be }\\ 
+&\text{translated to in the direction of the vector director}\\ 
+\end{aligned}$$
+        
+$$\\[3ex]$$
+
+$$\mathbf{n}  = (a, \, b) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{p}  = (x, \, y) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} - \mathbf{offset} = (a \cdot x) + (b \cdot y) - OFFSET $$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} - \mathbf{offset} = (a \cdot x) + (b \cdot y) - (\mathbf{|n|} * d) $$
+
+$$\\[3ex]$$
+
+$$OFFSET = \mathbf{distance\ from\ the\ origin} = \mathbf{|n|} \cdot d $$
+
+$$\\[3ex]$$
+
+$$OFFSET =  \mathbf{|n|} \cdot d $$
+
+$$\\[3ex]$$
+
+$$d = \text{literally the distance we want to set the line from the origin} $$
+
+$$\\[3ex]$$
+
+$$OFFSET > \mathbf{0} \longrightarrow \text{line move direction of the vector} $$
+
+$$\\[3ex]$$
+
+$$OFFSET < \mathbf{0} \longrightarrow \text{line move opposite the direction of the vector} $$
+
+</div>
+
+<br>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Now one property that is really interesting, is that if you multiply the values of the }\\ 
+&\text{magnitude of the vector director square }, \mathbf{||n||^2},\ \text{you are going to get the line position}\\ 
+&\text{directly over the point of the vector director. }\\ 
+\end{aligned}$$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} - \mathbf{offset} = (a \cdot x) + (b \cdot y) - (\mathbf{|n|} * \mathbf{|n|}) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} - \mathbf{offset} = (a \cdot x) + (b \cdot y) - (\mathbf{|n|}^2) $$
+
+$$\\[3ex]$$
+
+
+</div>
+
+<br>
+
+<img src="Img/LineOffsetVectorDOT.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<br>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Another particularity of this property, is that if you want to get the line to cut particular points}\\ 
+&\text{of the axis, it'll be necessary to set the values of the vector director line like this. }\\ 
+\end{aligned}$$
+
+
+$$\\[3ex]$$
+
+$$\mathbf{n}  = (a, \, b) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{p}  = (x, \, y) $$
+
+$$\\[3ex]$$
+
+$$offset =  (a * b) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} - \mathbf{offset} = (a \cdot x) + (b \cdot y) - (a * b) $$
+
+$$\\[3ex]$$
+
+$$\text{the,}\quad \mathbf{a}\quad  \text{would cut the |Y axis }  $$
+$$\text{the,}\quad \mathbf{b}\quad  \text{would cut the |X axis }  $$
+
+</div>
+
+<img src="Img/LineOffsetCUTAXIS.png"  style="display: block; margin: 0 auto; width: 50%;">
+        
+
+<hr>
+
+
+
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_LineEquation_1_SDF.shader">
+Shader_Triangle_LineEquation_1_SDF
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_LineEquation_2_SDF.shader">
+Shader_Triangle_LineEquation_2_SDF 
+</a>
+
+
+                                                                                                            
+
+
+
+<!-- 
+_______  _______  _       __________________ _                 _______                                              
+(  ____ \(  ___  )( (    /|\__   __/\__   __/( (    /||\     /|(  ____ \                                             
+| (    \/| (   ) ||  \  ( |   ) (      ) (   |  \  ( || )   ( || (    \/                                             
+| |      | |   | ||   \ | |   | |      | |   |   \ | || |   | || (__                                                 
+| |      | |   | || (\ \) |   | |      | |   | (\ \) || |   | ||  __)                                                
+| |      | |   | || | \   |   | |      | |   | | \   || |   | || (                                                   
+| (____/\| (___) || )  \  |   | |   ___) (___| )  \  || (___) || (____/\                                             
+(_______/(_______)|/    )_)   )_(   \_______/|/    )_)(_______)(_______/                                             
+                                                                                                                     
+ _______ _________ _______          __________________ _______ _________ _______  _        _______  _        _______ 
+(  ____ )\__   __/(  ____ \|\     /|\__   __/\__   __/(  ____ )\__   __/(  ___  )( (    /|(  ____ \( \      (  ____ \
+| (    )|   ) (   | (    \/| )   ( |   ) (      ) (   | (    )|   ) (   | (   ) ||  \  ( || (    \/| (      | (    \/
+| (____)|   | |   | |      | (___) |   | |      | |   | (____)|   | |   | (___) ||   \ | || |      | |      | (__    
+|     __)   | |   | | ____ |  ___  |   | |      | |   |     __)   | |   |  ___  || (\ \) || | ____ | |      |  __)   
+| (\ (      | |   | | \_  )| (   ) |   | |      | |   | (\ (      | |   | (   ) || | \   || | \_  )| |      | (      
+| ) \ \_____) (___| (___) || )   ( |   | |      | |   | ) \ \_____) (___| )   ( || )  \  || (___) || (____/\| (____/\
+|/   \__/\_______/(_______)|/     \|   )_(      )_(   |/   \__/\_______/|/     \||/    )_)(_______)(_______/(_______/
+-->
+
+<hr>
+<hr>
+<h1 style="font-size: 40px;"id ="Axis Lines"><b> Continue RightTriangle </b></h1>
+
+ 
+<div style = "font-size: 21px">
+  
+    
+<pre><code class="language-hlsl">
+ 
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+float sdf =  ( sign(disHypotenuse) < 0 && screenSpace.y > 0 && screenSpace.x > 0 ) ? 1.0 : 0.0 ;
+
+</code></pre>
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{from this point on when we visualize the equation for the line in the 2d space, it should be really simple }\\
+&\text{and clear to image, what does the output of this specific set of values represent, and what we can do with }\\
+&\text{them to get information from them. }\\
+\end{aligned}$$
+</div>
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+</code></pre>
+
+
+$$\begin{aligned}
+&\text{In this case the information according the formula for the line would be represented like this.}\\
+\end{aligned}$$
+
+$$\mathbf{n}  = (a, \, b) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{p}  = (x, \, y) $$
+
+$$\\[3ex]$$
+
+$$\mathbf{n} \cdot \mathbf{p} - \mathbf{offset} = (a \cdot x) + (b \cdot y) - (a * b) $$
+
+$$\\[3ex]$$
+
+$$ dot(size,\ screenSpace\ )\ -\ (size.x\ *\ size.y)\ = \ \mathbf{n} \cdot \mathbf{p} - \mathbf{offset}  $$
+
+$$\\[3ex]$$
+
+$$ dot(size,\ screenSpace\ )\ -\ (size.x\ *\ size.y)\ = (a \cdot x) + (b \cdot y) - (a * b) $$
+
+$$\\[3ex]$$
+
+$$\begin{aligned} 
+&\text{with this information we can get the positive and negative side of the line, that we could use to identify }\\
+&\text{if the points lays in the screen space lays in the inside or outside of the triangle. }\\
+&\text{is rather a representation of different theories that converge into something that works for us.}\\
+&\text{or more over, not just work fur us, but help us get the things that we want.}\\
+\end{aligned}$$
+
+</div>
+
+
+
+<div style = "font-size: 21px">
+
+<pre><code class="language-hlsl">
+        
+float sdf =  ( sign(disHypotenuse) < 0 && screenSpace.y > 0 && screenSpace.x > 0 ) ? 1.0 : 0.0 ;
+        
+</code></pre>
+        
+
+$$\begin{aligned}
+&\text{In this case we are going to be able to make a recognize or present a set of values that we could use to }\\
+&\text{represent a triangle.}\\
+&\text{in this case the triangle is position in the 1 cuadrant of the cartesian plane, and the place where we are }\\
+&\text{going to evaluate the points, create limits to make the motions run. and obtian results.}\\
+\end{aligned}$$
+
+$$\\[3ex]$$
+
+$$\begin{aligned}
+&\text{So what does this line does, lets explain all the evaluations that define what is really happening here.}\\
+&\text{in this case the evaluations are really simple to make, the only question that we got to keep in mind is... }\\
+&\text{Which characteristics define the points inside the triangle.}\\
+\end{aligned}$$
+
+$$\\[3ex]$$
+
+</div>
+
+<div style = "font-size: 21px">
+
+$$\\[3ex]$$
+$$\begin{aligned}
+&\text{lets define this characteristics :}\\
+\end{aligned}$$
+
+$$ trianglePoint > 0.0 $$
+
+$$\\[3ex]$$
+
+$$trianglePoint = [\mathbf{(x, y)} \longrightarrow \mathbf{PlanePoint}] > 0.0 \quad $$
+
+$$\\[3ex]$$
+
+$$\text{Cuz the triangle is in the positive quadrant the point is always positive.} $$
+
+$$\\[5ex]$$
+
+$$\begin{aligned}
+&\text{but that'll mean that all the points in the positive quadrant are part of a triangle and thats is just not true.}\\
+&\text{and thats is where the hypothenuse/equation of the line enters in actions}\\
+\end{aligned}$$
+
+$$\\[3ex]$$
+
+$$ \mathbf{PlanePoint} \longrightarrow p \quad | \quad \mathbf{disHypotenuse} = \mathbf{n} \cdot \mathbf{p} - \mathbf{offset} <  0 $$
+
+$$\\[3ex]$$
+
+$$\begin{aligned}
+&\text{so the points that are also positive thanks to its inner properties in the plane, but also}\\
+&\text{negative thanks to the equation of the line, points negative are going to be the points }\\
+&\text{that lay inside the triangle.}\\
+\end{aligned}$$
+
+
+<pre><code class="language-hlsl">
+        
+float sdf =  ( sign(disHypotenuse) < 0 && screenSpace.y > 0 && screenSpace.x > 0 ) ? 1.0 : 0.0 ;
+
+float4 col = colorBlack;
+
+col = fixed4(sdf, sdf, sdf, 1.0);
+
+</code></pre>
+                
+</div>
+
+<div style = "font-size: 21px">
+
+$$\text{And this is how we are going to get this image plotted in the shader.}$$
+
+</div>
+
+<img src="Img/TriangleRectangleShader.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+
+<div style = "font-size: 21px">
+
+$$\text{But if we just graphics the code like this we are going to get this edges.}$$
+        
+</div>
+        
+
+<img src="Img/SawToothTriangleRectangle.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Which are very very sawtoothty, and which makes the look of it really really difficult to look at.}\\
+&\text{So if we want to implement the techniques that we had learn on regards of how to smooth this edges.}\\
+&\text{we are going to need to set this things like this.}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+float sdf =  ( sign(disHypotenuse) < 0 && screenSpace.y > 0 && screenSpace.x > 0 ) ? 1.0 : 0.0 ;
+    
+float shader = 0.0;
+
+if(sdf == 1.0)
+{
+
+    float shaderSmooth =  min(abs(disHypotenuse), min(screenSpace.x, screenSpace.y));
+    
+    shader = shaderSmooth;
+
+    }
+
+float shaderOut =  smoothstep(0.0, 0.004, shader);
+
+float col = fixed4(shaderOut, shaderOut, shaderOut, 1.0);
+
+return col;
+
+</code></pre>    
+
+$$\begin{aligned}
+&\text{The goal here is to identify how we could make the information be smoothed using the values }\\
+&\text{that we already got. So, the first thing that we could make use for in here, is going to }\\
+&\text{be the signdistance. of the hypothenuse }\\
+&\text{we are going to compare if the values from the sign distance are within a range and if they are}\\
+&\text{we shade the colors into black. Thanks to the smooth function.}\\
+&\text{and to shade the right borders we just take the comparation of the values which are lesser than 0.004}\\
+\end{aligned}$$
+
+
+$$\begin{aligned}
+&\text{And if the values fall into the bounds of the smoothstep is how we are going to shade the }\\
+&\text{pixels output }\\
+\end{aligned}$$
+
+
+</div>
+
+<img src="Img/SmoothTriangleRectangle.png"  style="display: block; margin: 0 auto; width: 50%;">
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{And if we want to put everything more packaged and without too many comparations and evaluation }\\
+&\text{of minimus, and evaluation of absolutes. we can just package all this theories into something  }\\
+&\text{more precise, which means lesser evaluations.}\\
+&\text{}\\
+\end{aligned}$$
+        
+
+
+
+<pre><code class="language-hlsl">
+
+fixed4 frag (PixelData i) : SV_Target
+{
+
+
+float2 uv =  i.uv ;
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float2 size = float2(0.5 ,0.5);
+
+float2 screenSpace = coordinateScale;
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+screenSpace = -screenSpace;
+
+float sdf = max(max(screenSpace.x, screenSpace.y), disHypotenuse);
+
+float shader = 1.0 - smoothstep(0.0, 0.01, sdf);
+
+float4 col = colorBlack;
+
+col = fixed4(shader, shader, shader, 1.0);
+
+return col;
+    
+}
+
+
+
+</code></pre>    
+
+</div>
+
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{The idea is to create a relationship, that makes sense with few lines of code.}\\
+&\text{Explain the sames theories but with few lines of code. }\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+screenSpace = -screenSpace;
+
+float sdf = max(max(screenSpace.x, screenSpace.y), disHypotenuse);
+
+</code></pre>    
+
+$$\begin{aligned}
+&\text{And to do that we only need this lines, the idea here by reflecting the points on the plane}\\
+&\text{we are going to get the values of the borders in a negative representation, and cuz }\\
+&\text{the sign distance also is negative, then we are going to get always negative if the point is }\\
+&\text{in the triangle and positive if its outside.}\\
+&\text{and all of this is thanks to the max function, that allow us to make this representation.}\\
+&\text{And remember that we are only going to paint values that fall in the negative section.}\\
+\end{aligned}$$
+        
+</div>
+
+<div style = "font-size: 21px">
+
+$$\begin{aligned}
+&\text{Now if you want to draw an issosceles triangle, or a rhombus the only thing that you need to do}\\
+&\text{is modify the values of the screenspace X and Y, into their absolutes, like this. }\\
+\end{aligned}$$
+
+$$\begin{aligned}
+&\text{This would be for the ISSOSCELES TRIANGLE}\\
+&\text{}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+fixed4 frag (PixelData i) : SV_Target
+{
+
+float2 uv =  i.uv ;
+
+float4 colorWhite = float4(1,1,1,1); // Color white.
+float4 colorBlack = float4(0,0,0,1); // Color Black.
+
+
+float2 coordinateScale = (uv * 2.0)  - 1.0;
+
+float2 size = float2(0.5 ,0.5);
+
+float2 screenSpace = coordinateScale;
+
+screenSpace = float2(abs(screenSpace.x), screenSpace.y);
+
+float disHypotenuse = dot(size, screenSpace ) - (size.x * size.y); 
+
+screenSpace = -screenSpace;
+
+float sdf = max(max(screenSpace.x, screenSpace.y), disHypotenuse);
+
+float shader = 1.0 - smoothstep(0.0, 0.01, sdf);
+
+float4 col = colorBlack;
+
+col = fixed4(shader, shader, shader, 1.0);
+
+return col;
+}
+            
+
+</code></pre>    
+
+$$\begin{aligned}
+&\text{This would be for the RHOMBOUS}\\
+&\text{}\\
+\end{aligned}$$
+
+<pre><code class="language-hlsl">
+
+screenSpace = float2(abs(screenSpace.x), abs(screenSpace.y));
+
+</code></pre>    
+
+
+</div>
+
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_Rec_1_SDF.shader">
+Shader_Triangle_Rec_1_SDF
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_Rec_2_SDF.shader">
+Shader_Triangle_Rec_2_SDF
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_Rec_3_SDF.shader">
+Shader_Triangle_Rec_3_SDF
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_Isosceles_1_SDF.shader">
+Shader_Triangle_Isosceles_1_SDF.shader
+</a>
+
+<br>
+
+<a style="color: blue; font-size: 36px; font-weight: bold;" href="https://github.com/Andreality1/Mathematics-Code-Shaders-Plane-PolyG/blob/main/Scripts/Shader_Triangle_Rhombus_1_SDF.shader">
+Shader_Triangle_Rhombus_1_SDF
+</a>
+    
+    
+   
+
+
+<hr>
+<h1 style="font-size: 30px;"><b> End </b></h1>
+<hr>
+
+    
+
+<!-- 
+_______  _        ______     _  _  _ 
+(  ____ \( (    /|(  __  \   ( )( )( )
+| (    \/|  \  ( || (  \  )  | || || |
+| (__    |   \ | || |   ) |  | || || |
+|  __)   | (\ \) || |   | |  | || || |
+| (      | | \   || |   ) |  (_)(_)(_)
+| (____/\| )  \  || (__/  )   _  _  _ 
+(_______/|/    )_)(______/   (_)(_)(_)
+
+-->
+
+
+<br>
+<br>
+
+<a href="https://andreality1.github.io/Mathematics-Code_INDEX/">
+    <h1 style="font-size: 40px; color: #03B5BE; text-decoration: underline;">
+    <b>
+            Mathematics-Code_INDEX
+    </b>
+    </h1>
+</a>
+
+
+</div>
+
+<br>
+<br>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+            delimiters: [
+                {left: "$$", right: "$$", display: true},
+                {left: "$", right: "$", display: false}
+            ]
+        });
+    });
+    </script>
+
+	
+        <!-- <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> -->
+        <!-- <script>window.jQuery </script> -->
+        <!-- <script src="script.js"></script> -->
+
+
+    </body>
+</html>
+
